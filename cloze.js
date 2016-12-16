@@ -1,9 +1,22 @@
 Cloze = (function(){
   "use strict";
-  var hidden;
-  var blurEvents;
-  var hiddenEvent;
-  var visibleEvent;
+  var hidden, blurEvents, hiddenEvent, visibleEvent;
+
+  function init() {
+    // initialize default values
+    hidden = hiddenProp();
+    blurEvents = ["blur", "focusout", "pagehide"];
+
+    addListeners();
+
+    // create hidden event
+    hiddenEvent = document.createEvent('Event');
+    hiddenEvent.initEvent('cloze:hidden', true, true);
+
+    // create visible event
+    visibleEvent = document.createEvent('Event');
+    visibleEvent.initEvent('cloze:visible', true, true);
+  }
 
   function hiddenProp() {
     var prefixes = ['webkit','moz','ms','o'];
@@ -46,22 +59,6 @@ Cloze = (function(){
     else {
       document.dispatchEvent(visibleEvent);
     }
-  }
-
-  function init() {
-    // initialize default values
-    hidden = hiddenProp();
-    blurEvents = ["blur", "focusout", "pagehide"];
-
-    addListeners();
-
-    // create hidden event
-    hiddenEvent = document.createEvent('Event');
-    hiddenEvent.initEvent('cloze:hidden', true, true);
-
-    // create visible event
-    visibleEvent = document.createEvent('Event');
-    visibleEvent.initEvent('cloze:visible', true, true);
   }
 
   return {
