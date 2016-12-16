@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script src="cloze.js"></script>
+  <script>
+    // Initialize
+    Cloze.init();
+
+    document.addEventListener("cloze:hidden", function(){
+      addLogMessage("hidden");
+    });
+
+    document.addEventListener("cloze:visible", function(){
+      addLogMessage("visible");
+    });
+
+    function addLogMessage(message) {
+      var div = document.createElement("div");
+      div.innerHTML = "<p>" + message + ": " + new Date() + "</p>";
+      document.getElementsByTagName("body")[0].appendChild(div);
+    }
+  </script>
+</body>
+</html>
