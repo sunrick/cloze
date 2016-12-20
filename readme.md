@@ -121,4 +121,4 @@ To create cloze.min.js, first install:
 
 Then run:
 
-`uglifyjs cloze.js  --compress --mangle --output cloze.min.js`
+`uglifyjs cloze.js  --compress --mangle --comments --output cloze.min.js`

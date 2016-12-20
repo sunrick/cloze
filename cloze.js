@@ -1,5 +1,4 @@
-"use strict";
-
+/* @license cloze.js https://github.com/sunrick/cloze Rickard Sundén MIT License */ "use strict";
 Cloze = (function(){
 
   var hidden, blurEvents, hiddenEvent, visibleEvent;
