@@ -2,7 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-cloze.js is a tiny, dependency free, javascript library that detects when a user is viewing your website. It supports major browsers and tries its best to accomodate older ones.
+cloze.js is a tiny, dependency free, javascript library that detects when a user is viewing your website. It supports all major browsers and tries its best to accomodate older ones.
+
+[See it in action here.](https://sunrick.github.io/cloze/)
 
 ### Why?
 
@@ -16,7 +18,7 @@ cloze.js is a tiny, dependency free, javascript library that detects when a user
 
 Download either `cloze.js` or `cloze.min.js` from the latest release/master branch.
 
-Include it in your html. 
+Include it in your html.
 
 ```
 <script src="path_to/cloze.min.js"></script>
@@ -30,15 +32,15 @@ jQuery.
 <script>
   $(document).ready(function(){
     Cloze.init();
-    
+
     $(document).on("cloze:hidden", function(){
       mySiteJustBecameHidden();
     });
-    
+
     $(document).on("cloze:visible", function(){
       mySiteJustBecameVisible();
     });
-    
+
   });
 </script>
 ```
@@ -50,7 +52,7 @@ Plain ole javascript.
   <rest of html>
   <script>
     Cloze.init();
-    
+
     document.addEventListener("cloze:hidden", function(){
       console.log("screw you for leaving");
     });
@@ -61,7 +63,7 @@ Fancy "new" javascript. (IE 9+)
 
 ```javascript
 <script>
-  document.addEventListener("DOMContentLoaded", function(event) { 
+  document.addEventListener("DOMContentLoaded", function(event) {
     Cloze.init();
     // same as others.
   });
@@ -94,9 +96,9 @@ Please note that the initial page load does not trigger a visible state.
 
 ## How does it work?
 
-It uses the [Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) to detect visibility state changes of the browser. 
+It uses the [Visibility API](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) to detect visibility state changes of the browser.
 
-* Uses prefixes for cross browser support. 
+* Uses prefixes for cross browser support.
 * Supports older browsers by using variations of `focus` and `blur` events. Check the code for more information.
 
 ## Contributing
