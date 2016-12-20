@@ -80,6 +80,7 @@ Please note that the initial page load does not trigger a visible state.
 
 * Changing browser tabs to and from your website.
 * Minimizing and opening the browser window back to your website.
+* Closing tab or closing window.
 
 #### Does not detect
 
@@ -93,6 +94,7 @@ Please note that the initial page load does not trigger a visible state.
 * Changing browser tabs to and from your website.
 * Changing from browser to another app.
 * Locking to home screen from browser and from lock screen to browser.
+* Closing tab and closing window.
 
 ## How does it work?
 
