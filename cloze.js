@@ -1,5 +1,7 @@
+"use strict";
+
 Cloze = (function(){
-  "use strict";
+
   var hidden, blurEvents, hiddenEvent, visibleEvent;
 
   function init() {
