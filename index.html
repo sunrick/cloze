@@ -58,16 +58,16 @@
     Cloze.init();
 
     document.addEventListener("cloze:hidden", function(){
-      addLogMessage("Hidden");
+      addLogMessage("Hidden", "is-danger");
     });
 
     document.addEventListener("cloze:visible", function(){
-      addLogMessage("Visible");
+      addLogMessage("Visible", "is-success");
     });
 
-    function addLogMessage(message) {
+    function addLogMessage(message, klass) {
       var div = document.createElement("div");
-      div.innerHTML = '<span class="tag is-info is-large">' + message + ": " + new Date() + "</span>";
+      div.innerHTML = '<span class="tag is-large ' + klass + '">' + message + ": " + new Date() + "</span>";
       document.getElementById("notifications").appendChild(div);
     }
   </script>
